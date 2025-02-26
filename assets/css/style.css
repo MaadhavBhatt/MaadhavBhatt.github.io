@@ -1,0 +1,93 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* Tailwind */
+@import 'tailwindcss';
+
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+
+nav a {
+  all: unset;
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*  */
+nav {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: 100%;
+  padding: 2rem;
+}
+
+.nav-item {
+  font-size: 1.5em;
+  /* padding: 2rem; */
+}
+
+/* .nav-item:hover {
+  padding: 6rem;
+} */
+
+/* Hero */
+.hero {
+  width: 100vw;
+}
+
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  min-height: 50vh;
+}
+
+.hero-heading {
+  font-family: 'EB Garamond', serif;
+  font-size: min(7em, 18vw);
+  text-align: center;
+  line-height: 1;
+
+  margin: 0 auto;
+}
+
+.hero-subheading {
+  font-size: min(1.5em, 10vw);
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+/* Media Query */
+@media (max-width: 418px) {
+  .hero-subheading {
+    display: none;
+  }
+}
