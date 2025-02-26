@@ -1,0 +1,36 @@
+/* Hero */
+.hero {
+  width: 100vw;
+}
+
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  min-height: 50vh;
+}
+
+.hero-heading {
+  font-family: 'EB Garamond', serif;
+  font-size: min(7em, 18vw);
+  text-align: center;
+  line-height: 1;
+
+  margin: 0 auto;
+}
+
+.hero-subheading {
+  font-size: min(1.5em, 10vw);
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+/* Media Query */
+@media (max-width: 418px) {
+  .hero-subheading {
+    display: none;
+  }
+}
