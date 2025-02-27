@@ -7,6 +7,11 @@
 /* Tailwind */
 @import 'tailwindcss';
 
+:root {
+  --light-1: hsl(27, 53%, 93%);
+  --light-2: hsl(27, 53%, 85%);
+}
+
 /* Resets */
 *,
 *::before,
@@ -28,7 +33,34 @@ nav a {
   margin: 0 auto;
 }
 
-/*  */
+/* Utility Classes */
+.light-1 {
+  background-color: var(--light-1);
+}
+
+.light-2 {
+  background-color: var(--light-2);
+}
+
+/* Hamburger */
+.hamburger {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4em;
+}
+
+.nav-toggle {
+  padding: 1rem 2rem;
+}
+
+.nav--closed {
+  display: none;
+
+  /* I can't work out how to make the hamburger stay when the menu is closed, so I'm just doing a pop in and pop out. Leaving this code here for the future. */
+  /* position: absolute;
+  transform: translateY(-100%); */
+}
+
+/* Navigation */
 nav {
   width: 100%;
 }
@@ -83,5 +115,20 @@ nav {
 
   .nav-item {
     font-size: 1.5em;
+  }
+
+  .nav--closed {
+    position: initial;
+    transform: initial;
+    display: initial;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  header {
+    /* I don't see an elegant way to override the light-1 class that's coming from a closed menu, so I gotta use !important */
+    background-color: var(--light-2) !important;
   }
 }
