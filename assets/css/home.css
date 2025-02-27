@@ -1,0 +1,53 @@
+/* Hero */
+.hero {
+  width: 100vw;
+}
+
+.hero-layout {
+  display: grid;
+  gap: min(5rem, 5vw);
+  grid-template-rows: 2fr 3fr;
+
+  min-height: min(80vh, 700px);
+  padding: 5rem 0;
+}
+
+.hero-text {
+  margin: auto;
+}
+
+.hero-text > * {
+  padding: 1rem 0;
+}
+
+.hero-heading {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(7em, 12vw, 10em);
+  text-align: center;
+  line-height: 1;
+
+  margin: 0 auto;
+}
+
+.hero-subheading {
+  font-size: min(2em, 10vw);
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.hero-image {
+  margin: auto;
+}
+
+/* Media Queries */
+
+@media (min-width: 1024px) {
+  .hero-layout {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 2fr;
+    gap: 10%;
+
+    min-height: 80vh;
+  }
+}

@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maadhav Bhatt</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <script src="assets/js/index.js"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
-    <nav class="bg-[f1f1f1]">
-      <ul class="nav-list">
-        <li><a class="nav-item" href="#">Home</a></li>
-        <li><a class="nav-item" href="#">About Me</a></li>
-        <li><a class="nav-item" href="#">Contact Me</a></li>
-        <li><a class="nav-item" href="#">Another Option</a></li>
-        <li><a class="nav-item" href="#">Yet Another Option</a></li>
-      </ul>
-    </nav>
-    <section class="hero">
-      <div class="container hero-flex">
-        <h1 class="hero-heading">Hi! I'm Maadhav.</h1>
-        <p class="hero-subheading">This is a work in progress.</p>
+    <header class="light-1">
+      <button type="button" class="nav-toggle light-1">
+        <span class="hamburger">☰</span>
+      </button>
+
+      <nav class="nav--closed light-2">
+        <ul class="nav-list">
+          <li><a class="nav-item" href="#">Home</a></li>
+          <li><a class="nav-item" href="#">About Me</a></li>
+          <li><a class="nav-item" href="#">Another Option</a></li>
+          <li><a class="nav-item" href="#">Yet Another Option</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero light-1">
+      <div class="container hero-layout">
+        <div class="hero-text">
+          <h1 class="hero-heading">Hi! I'm Maadhav.</h1>
+          <p class="hero-subheading">This is a work in progress.</p>
+        </div>
+        <!-- <img class="hero-image" src="assets/designs/photo.JPG" alt="" /> -->
+        <img class="hero-image" src="https://placehold.co/400" alt="" />
       </div>
     </section>
   </body>
