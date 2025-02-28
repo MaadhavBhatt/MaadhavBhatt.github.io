@@ -87,7 +87,7 @@ nav {
 
 .nav-item {
   font-family: 'Raleway', sans-serif;
-  font-size: 2.5em;
+  font-size: 1.5em;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   padding: 0.6rem;
@@ -114,10 +114,6 @@ nav {
 @media (min-width: 768px) {
   .nav-list {
     flex-direction: row;
-  }
-
-  .nav-item {
-    font-size: 1.5em;
   }
 
   .nav--closed {
