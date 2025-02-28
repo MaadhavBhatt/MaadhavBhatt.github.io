@@ -4,9 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Tailwind */
-@import 'tailwindcss';
-
 :root {
   --light-1: hsl(27, 53%, 93%);
   --light-2: hsl(27, 53%, 85%);
@@ -50,6 +47,7 @@ nav a {
 
 .nav-toggle {
   padding: 1rem 2rem;
+  border: none;
 }
 
 .nav--closed {
@@ -95,6 +93,35 @@ nav {
 
 .nav-item:hover {
   animation: scale 0.3s ease-in-out forwards;
+}
+
+/* Footer */
+.footer-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+  padding: 2rem 0;
+
+  text-align: center;
+}
+
+.footer-title {
+  font-family: 'Raleway', serif;
+  font-size: 1.5em;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-icon {
+  filter: grayscale(100%);
+  max-width: 2.5rem;
 }
 
 /* Keyframes */
