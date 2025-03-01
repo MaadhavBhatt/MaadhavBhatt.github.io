@@ -22,7 +22,8 @@
 
 .hero-heading {
   font-family: 'EB Garamond', serif;
-  font-size: clamp(7em, 12vw, 10em);
+  font-size: clamp(6em, 12vw, 10em);
+  font-weight: 400;
   text-align: center;
   line-height: 1;
 
@@ -38,6 +39,7 @@
 
 .hero-image {
   margin: auto;
+  max-width: 100%;
 }
 
 /* Media Queries */
@@ -45,7 +47,7 @@
 @media (min-width: 1024px) {
   .hero-layout {
     grid-template-rows: unset;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 10%;
 
     min-height: 80vh;
