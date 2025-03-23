@@ -1,15 +1,13 @@
+@import url(../css/typewriter.css);
+
 /* Hero */
 .hero {
   width: 100vw;
 }
 
 .hero-layout {
-  display: grid;
-  gap: min(5rem, 5vw);
-  grid-template-rows: 2fr 3fr;
-
-  min-height: min(80vh, 700px);
-  padding: 5rem 0;
+  min-height: min(90vh, 700px);
+  padding: 15rem 0;
 }
 
 .hero-text {
@@ -20,20 +18,20 @@
   padding: 1rem 0;
 }
 
-.hero-heading {
-  font-family: 'EB Garamond', serif;
-  font-size: clamp(6em, 12vw, 10em);
-  font-weight: 400;
-  text-align: center;
-  line-height: 1;
+.hero-text:first-child + .hero-heading {
+  padding: 0;
+}
 
-  margin: 0 auto;
+.hero-heading {
+  font-family: 'Source Code Pro', serif;
+  font-size: clamp(4em, 12vw, 7em);
+  font-weight: 600;
+  line-height: 1;
 }
 
 .hero-subheading {
+  font-family: 'Raleway', sans-serif;
   font-size: min(2em, 10vw);
-  text-align: center;
-
   margin: 0 auto;
 }
 
@@ -43,7 +41,6 @@
 }
 
 /* Media Queries */
-
 @media (min-width: 1024px) {
   .hero-layout {
     grid-template-rows: unset;
