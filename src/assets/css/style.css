@@ -1,7 +1,4 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
@@ -18,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 10px;
 }
 
@@ -47,67 +44,12 @@ nav a {
   background-color: var(--light-2);
 }
 
-/* Hamburger */
-.hamburger {
-  font-family: 'Raleway', sans-serif;
-  font-size: 4em;
-}
-
-.nav-toggle {
-  padding: 1rem 2rem;
-  border: none;
-}
-
-.nav--closed {
-  display: none;
-
-  /* I can't work out how to make the hamburger stay when the menu is closed, so I'm just doing a pop in and pop out. Leaving this code here for the future. */
-  /* position: absolute;
-  transform: translateY(-100%); */
-}
-
-/* Navigation */
-nav {
-  width: 100%;
-}
-
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  width: 100%;
-  padding: 2rem;
-}
-
-.nav-list > li {
-  text-align: center;
-}
-
-.nav-item {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.5em;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  padding: 0.6rem;
-}
-
-.nav-item:hover {
-  animation: scale 0.3s ease-in-out forwards;
-}
-
 /* Footer */
 .footer {
   background-color: var(--dark-1);
   color: var(--light-1);
   padding: 2rem 0;
+  min-height: 10vh;
 
   display: flex;
   flex-direction: column;
