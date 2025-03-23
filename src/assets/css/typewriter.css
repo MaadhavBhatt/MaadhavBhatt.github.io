@@ -1,0 +1,103 @@
+:root {
+  --clr-brand: hsl(152, 70%, 43%);
+  --clr-white: hsl(27, 53%, 93%);
+  --clr-black: hsl(0, 0%, 10%);
+}
+
+.hero-heading {
+  width: max-content;
+}
+
+.d-none {
+  display: none;
+}
+
+.typewriter-container {
+  --typewriter-speed: 4s;
+  --typewriter-chars: 14;
+  --typewriter-cursor-delay: 1s;
+  --typewriter-reveal-delay: var(--typewriter-cursor-delay);
+  --typewriter-blink: 750ms;
+  --typewriter-iteration-count: infinite;
+}
+
+.typewriter-1 {
+  --typewriter-chars: 7;
+  --show-typewriter: block;
+}
+
+.typewriter-2 {
+  --typewriter-chars: 6;
+  --typewriter-cursor-delay: 0s;
+  --typewriter-reveal-delay: 5s;
+  --show-typewriter: none;
+}
+
+.typewriter-1::after,
+.typewriter-2::after {
+  display: var(--show-typewriter);
+}
+
+.typewriter,
+.typewriter-1,
+.typewriter-2 {
+  position: relative;
+}
+
+.typewriter::before,
+.typewriter::after,
+.typewriter-1::before,
+.typewriter-1::after,
+.typewriter-2::before,
+.typewriter-2::after {
+  font-size: var(--typewriter-fs);
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.typewriter::before,
+.typewriter-1::before,
+.typewriter-2::before {
+  background: var(--clr-white);
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
+    var(--typewriter-reveal-delay) forwards;
+}
+
+.typewriter::after,
+.typewriter-1::after,
+.typewriter-2::after {
+  width: 0.125em;
+  background: var(--clr-black);
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
+      var(--typewriter-cursor-delay) forwards,
+    blink var(--typewriter-blink) steps(var(--typewriter-chars)) var(--typewriter-iteration-count);
+}
+
+.typewriter-fade {
+  --typewriter-fade-delay: 0s;
+
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fade-in-up 2s ease var(--typewriter-fade-delay) forwards;
+}
+
+/* Keyframes */
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
