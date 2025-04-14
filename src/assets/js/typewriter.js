@@ -83,4 +83,4 @@ setTimeout(() => {
 
   firstTypewriter.style.setProperty('--show-typewriter', 'none');
   secondTypewriter.style.setProperty('--show-typewriter', 'block');
-}, 5000);
+}, 2000);

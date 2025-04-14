@@ -13,7 +13,7 @@
 }
 
 .typewriter-container {
-  --typewriter-speed: 4s;
+  --typewriter-speed: 2s;
   --typewriter-chars: 14;
   --typewriter-cursor-delay: 1s;
   --typewriter-reveal-delay: var(--typewriter-cursor-delay);
@@ -22,14 +22,16 @@
 }
 
 .typewriter-1 {
+  --typewriter-speed: 1s;
   --typewriter-chars: 7;
   --show-typewriter: block;
 }
 
 .typewriter-2 {
+  --typewriter-speed: 1s;
   --typewriter-chars: 6;
   --typewriter-cursor-delay: 0s;
-  --typewriter-reveal-delay: 5s;
+  --typewriter-reveal-delay: 2s;
   --show-typewriter: none;
 }
 
