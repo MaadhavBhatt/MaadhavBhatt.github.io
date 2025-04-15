@@ -13,7 +13,7 @@ function handleTypewriterVisibility() {
   const splitHeading1 = document.querySelector('#split-heading-1');
   const splitHeading2 = document.querySelector('#split-heading-2');
 
-  if (w >= 750) {
+  if (w >= 925) {
     largeHeading.classList.toggle('d-none');
     splitHeading1.classList.toggle('d-none');
     splitHeading2.classList.toggle('d-none');
@@ -31,7 +31,7 @@ function handleTypewriterFadeDelay() {
 
   let typewriterFadeDelay;
 
-  if (w >= 750) {
+  if (w >= 925) {
     // The cursor delay and the reveal delay are the same in the singular typewriter.
     let delay = window.getComputedStyle(typewriter).getPropertyValue('--typewriter-cursor-delay');
     let speed = window.getComputedStyle(typewriter).getPropertyValue('--typewriter-speed');
