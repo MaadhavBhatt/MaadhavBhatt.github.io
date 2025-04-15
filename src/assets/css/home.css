@@ -42,7 +42,7 @@
 
 /* Projects */
 .projects {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .projects-grid {
@@ -76,7 +76,7 @@
 }
 
 /* Media Queries */
-@media (min-width: 476px) {
+@media (min-width: 450px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
