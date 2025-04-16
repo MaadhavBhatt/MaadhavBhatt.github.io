@@ -1,33 +1,44 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('header');
-  const nav = document.querySelector('nav');
-  const navToggle = document.querySelector('.nav-toggle');
+function convertProjectsJSONToHTML(projectsJSON) {
+  const projectsDiv = document.querySelector('.projects-grid');
 
-  // Add click event listener to the toggle button
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', function () {
-      nav.classList.toggle('nav--closed');
+  projectsJSON.projects
+    .sort((a, b) => b.id - a.id)
+    .forEach((project) => {
+      const projectCard = document.createElement('div');
+      projectCard.className = 'project-card';
 
-      // Check if nav has nav--closed class after the toggle
-      if (nav.classList.contains('nav--closed')) {
-        // Nav is closed - use light-1
-        if (header) {
-          header.classList.remove('light-2');
-          header.classList.add('light-1');
-        }
-        // Also update the navToggle
-        this.classList.remove('light-2');
-        this.classList.add('light-1');
-      } else {
-        // Nav is open - use light-2
-        if (header) {
-          header.classList.remove('light-1');
-          header.classList.add('light-2');
-        }
-        // Also update the navToggle
-        this.classList.remove('light-1');
-        this.classList.add('light-2');
-      }
+      const heading = document.createElement('h2');
+      heading.className = 'project-heading';
+
+      const headingLink = document.createElement('a');
+      headingLink.className = 'project-heading-link';
+      headingLink.href = project.link;
+      headingLink.textContent = './' + project.title.toLowerCase();
+
+      const description = document.createElement('p');
+      description.className = 'project-description';
+      description.textContent = project.description;
+
+      const link = document.createElement('a');
+      link.className = 'project-link';
+      link.href = project.link;
+      link.textContent = '_';
+
+      heading.appendChild(headingLink);
+      projectCard.appendChild(heading);
+      projectCard.appendChild(description);
+      projectCard.appendChild(link);
+      projectsDiv.appendChild(projectCard);
     });
-  }
+
+  return projectsDiv;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/src/assets/data/projects.json')
+    .then((response) => response.json())
+    .then((projectsJSON) => {
+      convertProjectsJSONToHTML(projectsJSON);
+    })
+    .catch((error) => console.error('Error loading projects:', error));
 });
