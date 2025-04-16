@@ -35,7 +35,7 @@ function convertProjectsJSONToHTML(projectsJSON) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/src/assets/data/projects.json')
+  fetch('../data/projects.json')
     .then((response) => response.json())
     .then((projectsJSON) => {
       convertProjectsJSONToHTML(projectsJSON);
