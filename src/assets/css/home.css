@@ -23,7 +23,7 @@
 }
 
 .hero-heading {
-  font-family: 'Source Code Pro', serif;
+  font-family: 'Source Code Pro', monospace;
   font-size: clamp(4em, 12vw, 7em);
   font-weight: 600;
   line-height: 1;
