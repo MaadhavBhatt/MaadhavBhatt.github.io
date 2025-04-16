@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Personal Website",
+      "description": "this exact website you're on",
+      "link": "",
+      "image": ""
+    }
+  ]
+}
