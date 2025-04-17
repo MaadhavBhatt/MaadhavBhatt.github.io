@@ -6,6 +6,13 @@
       "description": "this exact website you're on",
       "link": "",
       "image": ""
+    },
+    {
+      "id": 2,
+      "title": "BookBuddy",
+      "description": "A matchmaking site for book donors and seekers",
+      "link": "https://github.com/MaadhavBhatt/bookbuddy",
+      "image": ""
     }
   ]
 }
