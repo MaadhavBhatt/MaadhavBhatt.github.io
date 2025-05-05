@@ -1,11 +1,23 @@
 {
-  "tailwindCSS.includeLanguages": {
-    "html": "html",
-    "css": "css",
-    "javascript": "javascript",
-  },
   "editor.inlineSuggest.enabled": true,
   "editor.quickSuggestions": {
     "strings": true
   },
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
