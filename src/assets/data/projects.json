@@ -4,15 +4,22 @@
       "id": 1,
       "title": "Personal Website",
       "description": "this exact website you're on",
-      "link": "",
-      "image": ""
+      "image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "imageLink": "https://github.com/MaadhavBhatt/MaadhavBhatt.github.io"
     },
     {
       "id": 2,
       "title": "BookBuddy",
       "description": "A matchmaking site for book donors and seekers",
-      "link": "https://github.com/MaadhavBhatt/bookbuddy",
-      "image": ""
+      "image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "imageLink": "https://github.com/MaadhavBhatt/bookbuddy"
+    },
+    {
+      "id": 3,
+      "title": "Parakeet",
+      "description": "A cosmic ray detector that will go 30km up in the sky",
+      "image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "imageLink": "https://github.com/MaadhavBhatt/project-parakeet"
     }
   ]
 }

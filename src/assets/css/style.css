@@ -23,6 +23,9 @@ a {
   text-decoration: none;
   color: inherit;
   font-size: inherit;
+
+  /* Removing this will break the project-grid layout in that if there are links inside project-cards that are longer than the width of their parent, the links will overflow. */
+  word-wrap: break-word;
 }
 
 nav a {

@@ -20,9 +20,20 @@ function convertProjectsJSONToHTML(projectsJSON) {
       description.textContent = project.description;
 
       const link = document.createElement('a');
+      link.setAttribute('target', '_blank');
       link.className = 'project-link';
-      link.href = project.link;
-      link.textContent = '_';
+
+      if (project.image) {
+        link.href = project.imageLink || project.link;
+        const image = document.createElement('img');
+        image.className = 'project-image';
+        image.src = project.image;
+        image.alt = project.imageAltText || project.title;
+        link.appendChild(image);
+      } else {
+        link.href = project.link;
+        link.textContent = project.linkContent || '_';
+      }
 
       heading.appendChild(headingLink);
       projectCard.appendChild(heading);

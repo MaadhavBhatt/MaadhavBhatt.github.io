@@ -74,6 +74,13 @@
   font-size: clamp(1.5em, 2vw, 1.5em);
 }
 
+.project-image {
+  max-width: 2.5rem;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
 /* Media Queries */
 @media (min-width: 450px) {
   .projects-grid {
@@ -89,7 +96,7 @@
 
 @media (min-width: 1000px) {
   .projects-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
