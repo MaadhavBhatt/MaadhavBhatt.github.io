@@ -84,3 +84,34 @@ setTimeout(() => {
   firstTypewriter.style.setProperty('--show-typewriter', 'none');
   secondTypewriter.style.setProperty('--show-typewriter', 'block');
 }, 2000);
+
+// Remove the typewriter cursor after 10 seconds.
+setTimeout(() => {
+  const typewriter = document.querySelector('.typewriter');
+  const firstTypewriter = document.querySelector('.typewriter-1');
+  const secondTypewriter = document.querySelector('.typewriter-2');
+
+  typewriter.style.setProperty('--show-typewriter', 'none');
+  firstTypewriter.style.setProperty('--show-typewriter', 'none');
+  secondTypewriter.style.setProperty('--show-typewriter', 'none');
+
+  // Remove typewriter related classes
+  const typewriterElements = document.querySelectorAll(
+    '.typewriter, .typewriter-1, .typewriter-2, .typewriter-fade'
+  );
+  typewriterElements.forEach((element) => {
+    // Remove typewriter classes
+    element.classList.remove('typewriter', 'typewriter-1', 'typewriter-2', 'typewriter-fade');
+
+    // Make sure the text is fully visible
+    element.style.width = 'auto';
+    element.style.animation = 'none';
+    element.style.opacity = '1';
+
+    // Remove any typewriter-specific styles
+    element.style.setProperty('--typewriter-speed', '0s');
+    element.style.setProperty('--typewriter-cursor-delay', '0s');
+    element.style.setProperty('--typewriter-reveal-delay', '0s');
+    element.style.setProperty('--typewriter-fade-delay', '0s');
+  });
+}, 5000);

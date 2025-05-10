@@ -21,6 +21,10 @@
   --typewriter-iteration-count: infinite;
 }
 
+.typewriter {
+  --typewriter-show: block;
+}
+
 .typewriter-1 {
   --typewriter-speed: 1s;
   --typewriter-chars: 7;
@@ -35,6 +39,7 @@
   --show-typewriter: none;
 }
 
+.typewriter::after,
 .typewriter-1::after,
 .typewriter-2::after {
   display: var(--show-typewriter);
