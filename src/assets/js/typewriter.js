@@ -14,9 +14,13 @@ function handleTypewriterVisibility() {
   const splitHeading2 = document.querySelector('#split-heading-2');
 
   if (w >= 925) {
-    largeHeading.classList.toggle('d-none');
-    splitHeading1.classList.toggle('d-none');
-    splitHeading2.classList.toggle('d-none');
+    largeHeading.classList.remove('d-none');
+    splitHeading1.classList.add('d-none');
+    splitHeading2.classList.add('d-none');
+  } else {
+    largeHeading.classList.add('d-none');
+    splitHeading1.classList.remove('d-none');
+    splitHeading2.classList.remove('d-none');
   }
 }
 
