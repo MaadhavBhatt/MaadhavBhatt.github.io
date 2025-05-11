@@ -7,36 +7,58 @@
 
 .hero-layout {
   padding: min(35vh, 35rem) 0;
-}
 
-.hero-text {
-  margin: auto;
+  & > * {
+    margin-bottom: 1.5rem;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .hero-text > * {
-  padding: 1rem 0;
+  margin-bottom: min(1em, 1.5rem);
 }
 
-.hero-text:first-child + .hero-heading {
-  padding: 0;
+.hero-text > *:last-child {
+  margin-bottom: 0;
 }
 
 .hero-heading {
   font-family: 'Source Code Pro', monospace;
-  font-size: clamp(4em, 12vw, 7em);
+  font-size: clamp(4rem, 6vw, 7rem);
   font-weight: 600;
   line-height: 1;
 }
 
 .hero-subheading {
   font-family: 'Raleway', sans-serif;
-  font-size: min(2em, 10vw);
-  margin: 0 auto;
+  font-size: clamp(1.5rem, 1.75vw, 2rem);
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  max-width: 60ch;
 }
 
-.hero-image {
-  margin: auto;
-  max-width: 100%;
+.hero-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  filter: contrast(200%) grayscale(100%);
+  transform: scale(1);
+  max-width: max(2rem, 1.5vw);
+  transition: filter 0.3s ease-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  filter: contrast(100%) grayscale(80%);
+  transform: scale(1.1);
+
+  &.lighten {
+    filter: invert(20%) grayscale(80%);
+  }
 }
 
 /* Projects */

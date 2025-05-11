@@ -13,7 +13,7 @@ function handleTypewriterVisibility() {
   const splitHeading1 = document.querySelector('#split-heading-1');
   const splitHeading2 = document.querySelector('#split-heading-2');
 
-  if (w >= 925) {
+  if (w >= 600) {
     largeHeading.classList.remove('d-none');
     splitHeading1.classList.add('d-none');
     splitHeading2.classList.add('d-none');
@@ -28,7 +28,7 @@ function handleTypewriterVisibility() {
 function handleTypewriterFadeDelay() {
   var w = window.innerWidth;
 
-  const typewriterFade = document.querySelector('.typewriter-fade');
+  const typewriterFade = document.querySelectorAll('.typewriter-fade');
   const typewriter = document.querySelector('.typewriter');
   const firstTypewriter = document.querySelector('.typewriter-1');
   const secondTypewriter = document.querySelector('.typewriter-2');
@@ -64,7 +64,9 @@ function handleTypewriterFadeDelay() {
     typewriterFadeDelay = typewriterFadeDelay.toString() + 's';
   }
 
-  typewriterFade.style.setProperty('--typewriter-fade-delay', typewriterFadeDelay);
+  typewriterFade.forEach((element) => {
+    element.style.setProperty('--typewriter-fade-delay', typewriterFadeDelay);
+  });
 }
 
 window.addEventListener('load', handleTypewriterVisibility);
