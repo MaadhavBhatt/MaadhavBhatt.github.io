@@ -90,6 +90,10 @@
   font-size: clamp(1.5em, 2vw, 1.5em);
 }
 
+.project-link {
+  width: fit-content;
+}
+
 .project-image {
   max-width: 2.5rem;
   max-height: 100%;
